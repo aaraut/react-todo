@@ -7,4 +7,5 @@ Steps to run locally
 
 
 Preview/ Screengrab
-![image](https://github.com/aaraut/react-todo/assets/55833241/67a3e660-f0ea-4a85-82e6-b453170a4b07)
+![image](https://github.com/aaraut/react-todo/assets/55833241/7350ab6d-4244-4add-a130-01b891946a7a)
+
