@@ -1,5 +1,6 @@
-import { Checkbox, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { Checkbox, Chip, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import React from 'react';
+import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
 const TodoList = ({todoList, handleCompleteToggle, handleDeleteItem}) => {
   return (
@@ -13,7 +14,7 @@ const TodoList = ({todoList, handleCompleteToggle, handleDeleteItem}) => {
                 <ListItem key={i.id}
                   secondaryAction={
                   <IconButton className='remove-btn' edge="end" onClick={(e) => handleDeleteItem(e, i.id)} title='Remove Item'>
-                    x
+                    <DeleteForeverOutlinedIcon/>
                   </IconButton>
                 } >
                   <ListItemButton role={undefined} onClick={(e) => handleCompleteToggle(e, i.id) } dense>
@@ -23,6 +24,11 @@ const TodoList = ({todoList, handleCompleteToggle, handleDeleteItem}) => {
                         checked={i.completed_at !== null}  
                       />
                       <ListItemText style={{fontSize: '20px'}} id={labelId} primary={i.title} />
+                      <Chip label={i.completed_at === null ? 'In Progress' : 'Completed'} 
+                        color={i.completed_at === null ? 'warning' : 'success'}
+                      />
+                      
+                     
                     </ListItemIcon>
                   </ListItemButton>
                   
