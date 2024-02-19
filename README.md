@@ -2,7 +2,7 @@
 
 Steps to run locally
 1) Install node modules -> npm install
-2) Run it using npm install
+2) Run it using npm start
 3) Run it on browser using http://localhost:3000
 
 
